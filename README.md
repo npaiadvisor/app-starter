@@ -2,7 +2,7 @@
 
 A starter for a **custom AI web-app assistant** for a nonprofit: monitor sources on a schedule → produce an AI brief / draft → a human reviews before anything goes out → log it. Part of the [Nonprofit AI Commons](https://github.com/npaiadvisor/discovery).
 
-> **Status:** being de-domained from a production donor-outreach system. Not yet runnable — watch this space.
+> **Status:** early but runnable. Extracted from a production donor-outreach system and scrubbed of client specifics; `pnpm build` passes. The example domain (donor/prospect outreach) is preserved as the reference vertical — fully abstracting it to a domain-neutral core is a tracked follow-on.
 
 ## Stack
 
@@ -25,9 +25,19 @@ This starter bakes in the safety rails that let a non-technical nonprofit mainta
 
 Everything client-specific — the domain taxonomy, the agent prompts, the output schema, the email copy, the schedule — lives in a clearly marked `config/` + `prompts/` layer. The reusable core underneath is meant to be left alone.
 
-## Scaffolding it
+## Quickstart
 
-Use the [`np-ai-discovery`](https://github.com/npaiadvisor/discovery) skill to fork and configure this starter for a specific nonprofit, or fork it directly and edit `config/`.
+```bash
+pnpm install
+cp .env.example .env.local   # fill in DATABASE_URL, AUTH_SECRET, OPENROUTER_API_KEY, …
+pnpm build                   # or: pnpm dev
+```
+
+Deploy to Vercel + Neon and set the same env vars in the Vercel project. `AGENTS.md` explains how changes ship (PR → preview → merge) and the safe-vs-escalate boundary.
+
+## Scaffolding it for a client
+
+Use the [`np-ai-discovery`](https://github.com/npaiadvisor/discovery) skill to fork and configure this starter for a specific nonprofit, or fork directly and customize the layer documented in [`config/README.md`](config/README.md): `config/app.ts`, `prompts/`, the domain tables in `lib/db/schema.ts`, the Zod contract in `lib/llm/schema.ts`, the email copy in `lib/email/`, and `vercel.json`. Leave the core alone.
 
 ## License
 
