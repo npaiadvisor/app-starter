@@ -8,7 +8,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 The **canonical runbook for any AI coding agent** working on this repo (OpenAI Codex, GitHub Copilot, Google Jules, Cursor, Claude Code). Written so a competent agent can make a correct, safe change from this file alone. `CLAUDE.md` imports this file (`@AGENTS.md`) and adds only Claude-specific notes — so this file stays the single source of truth.
 
-> This is a **starter** from the [Nonprofit AI Commons](https://github.com/npaiadvisor/discovery). The reference vertical: *monitor sources → produce an AI brief → a human reviews before anything goes out.* To repurpose it for a nonprofit, change only the customization surface in **[`config/README.md`](config/README.md)**.
+> This is a **starter** from the [Nonprofit AI Commons](https://github.com/npaiadvisor/discovery). The reference vertical: *monitor sources → produce an AI brief → a human reviews before anything goes out.* To repurpose it for a nonprofit, change only the customization surface — `config/app.ts`, `prompts/`, the domain tables in `lib/db/schema.ts`, the Zod contract in `lib/llm/schema.ts`, the email copy in `lib/email/`, and `vercel.json` (the list is repeated in `CLAUDE.md`).
 
 ## Who maintains this system
 
