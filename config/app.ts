@@ -2,9 +2,9 @@
  * Per-deployment configuration knobs — the customize-for-each-client boundary.
  *
  * The reusable core reads client-specific values from here (or the matching env
- * vars) so nothing client-specific is hard-coded in core code. See
- * config/README.md for the full list of customization points (agent prompts,
- * domain schema, email copy, cron schedule).
+ * vars) so nothing client-specific is hard-coded in core code. CLAUDE.md and
+ * AGENTS.md list the full customization surface, and AGENTS.md says what must
+ * be escalated to a developer instead.
  */
 
 // Display name of this assistant — used in OpenRouter attribution + UI copy.
