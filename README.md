@@ -37,7 +37,7 @@ Deploy to Vercel + Neon and set the same env vars in the Vercel project. `AGENTS
 
 ## Scaffolding it for a client
 
-Use the [`np-ai-discovery`](https://github.com/npaiadvisor/discovery) skill to fork and configure this starter for a specific nonprofit, or fork directly and customize the layer documented in [`config/README.md`](config/README.md): `config/app.ts`, `prompts/`, the domain tables in `lib/db/schema.ts`, the Zod contract in `lib/llm/schema.ts`, the email copy in `lib/email/`, and `vercel.json`. Leave the core alone.
+Use the [`np-ai-discovery`](https://github.com/npaiadvisor/discovery) skill to fork and configure this starter for a specific nonprofit, or fork directly and customize only this layer: `config/app.ts`, `prompts/`, the domain tables in `lib/db/schema.ts`, the Zod contract in `lib/llm/schema.ts`, the email copy in `lib/email/`, and `vercel.json`. Leave the core alone.
 
 ## License
 
